@@ -1,0 +1,46 @@
+@import "../../variables.scss";
+
+.msg__calendar-day {
+  background-color: $day-background-color;
+  box-shadow:
+    1px 0 0 0 $day-border-color,
+    0 1px 0 0 $day-border-color,
+    1px 1px 0 0 $day-border-color,   /* Just to fix the corner */
+    1px 0 0 0 $day-border-color inset,
+    0 1px 0 0 $day-border-color inset;
+  cursor: pointer;
+  display: inline-block;
+  max-height: 300px;
+  min-height: 100px;
+
+  &__number {
+    color: $day-border-color;
+    display: block;
+    font-size: 2.5rem;
+    margin: 15% auto;
+    width: 75%;
+  }
+
+  &__footer {
+    display: block;
+    font-size: 1rem;
+    margin: 15% auto;
+    width: 75%;
+  }
+
+  &__disabled {
+    opacity: .5;
+  }
+
+  &:hover {
+    &__number {
+      color: darkorange;
+    }
+
+    /* opacity: .8; */
+  }
+}
+
+.msg__calendar-day__blank {
+  visibility: hidden;
+}

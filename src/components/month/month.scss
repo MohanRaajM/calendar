@@ -1,0 +1,38 @@
+@import "../../variables.scss";
+
+.msg__calendar-month {
+  border-collapse: collapse;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  padding: 0;
+
+  &__label {
+    color: #000;
+    font-size: 4rem;
+    margin-bottom: 24px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__day-of-week-label {
+    display: inline-block;
+    color: #000;
+    display: inline-block;
+    font-size: 14px;
+    list-style-type: none;
+    max-height: 30px;
+    text-transform: uppercase;
+  }
+
+  li{
+    list-style-type: none;
+    max-width: $day-width;
+    text-align: center;
+    width: $day-width;
+
+    &:nth-child(7n+1) {
+      clear: right;
+    }
+  }
+}
